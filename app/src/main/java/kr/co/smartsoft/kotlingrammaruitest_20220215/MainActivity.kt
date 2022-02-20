@@ -16,10 +16,12 @@ class MainActivity : AppCompatActivity() {
 
             if (sId == "admin" && sPass == "asdf") {
                 Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
-            } else if (sId != "admin") {
-                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
-            } else if (sPass != "asdf") {
-                Toast.makeText(this, "패스워드가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+            } else {
+                if (sId != "admin") {
+                    Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "패스워드가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
